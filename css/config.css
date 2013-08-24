@@ -4,9 +4,12 @@
   top: 0;
   right: 0;
   z-index: 5;
-  width: 300px;
   color: #fff;
   text-shadow: 0px 1px rgba(0, 0, 0, .3);
+  
+  height: 210px;
+  width: 439px;
+  overflow: hidden;
 
   transition: transform .3s ease-in-out;
   -webkit-transition: -webkit-transform .3s ease-in-out;

@@ -301,8 +301,6 @@ Acko.Effect.Camera.prototype = _.extend(new Acko.Effect(), {
     // Ride
     if (!this.audioWaiting && this.ride) {
 
-      exports.scrollController.set(0, 0);
-
       // Slave clock to audio
       var delta = this.audio.currentTime == 0 ? 0 : exports.delta / Time.getSpeed();
       delta = Math.max(.00001, delta);
@@ -630,6 +628,8 @@ Acko.Effect.Camera.prototype = _.extend(new Acko.Effect(), {
 
   runRide: function () {
     if (this.ride) return;
+
+    gl.exports.scrollController.set(0, 0);
 
     this.ignoreClicks = 1;
 

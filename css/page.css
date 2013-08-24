@@ -5,6 +5,10 @@ html, body {
   background: #fff;
 }
 
+html.js body {
+  overflow-x: hidden;
+}
+
 html.js #fixed-frame {
   overflow: hidden;
 	z-index: 2;
@@ -52,7 +56,7 @@ html.no-js body {
 
 @media only screen and (max-device-width: 1024px) { 
   html.no-js body {
-    background: #fff url(/css/images/fallback.jpg) 50% 0 no-repeat;
+    background: #fff url(images/fallback.jpg) 50% 0 no-repeat;
   }
 }
 
@@ -71,4 +75,8 @@ html.no-js #fixed-frame {
   left: 0;
   right: 0;
   pointer-events: auto;
+}
+
+html.js .draggable {
+  cursor: move;
 }
