@@ -1,0 +1,17 @@
+.frame {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+.frame {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.dead {
+  pointer-events: none;
+}
+.fixed {
+  position: fixed;
+}

@@ -1,0 +1,528 @@
+#overlay {
+  display: none;
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  overflow: hidden;
+}
+#overlay div {
+  height: 28px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* expanded layout @ 1280 */
+/* full-width layout @ 960 */
+/* fluid layout 640-960 */
+.grid {
+  left: 49.99999%;
+  margin-left: -480px;
+  width: 960px;
+  position: absolute;
+  -webkit-transform: translateZ(0px);
+}
+
+.grid .grid {
+  position: static;
+  left: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+.grid .l {
+  float: left;
+}
+.grid .r {
+  float: right;
+}
+
+.grid .wh {
+  background: #fff;
+}
+
+.grid .c, .grid .cl {
+  clear: left;
+}
+
+.grid .cr {
+  clear: right;
+}
+
+.grid .cb {
+  clear: both;
+}
+
+html .grid .pr {
+  position: relative !important;
+}
+
+html .grid .pa {
+  position: absolute !important;
+}
+
+
+.grid .t-2 {
+  top: -56px;
+}
+.grid .t-1 {
+  top: -28px;
+}
+.grid .t1 {
+  top: 28px;
+}
+.grid .t2 {
+  top: 56px;
+}
+.grid .t3 {
+  top: 84px;
+}
+.grid .t4 {
+  top: 112px;
+}
+.grid .t5 {
+  top: 140px;
+}
+
+.grid .h1 {
+  height: 28px;
+}
+.grid .h2 {
+  height: 56px;
+}
+.grid .h3 {
+  height: 84px;
+}
+.grid .h4 {
+  height: 112px;
+}
+.grid .h5 {
+  height: 140px;
+}
+
+.grid .mt-2, .grid .m-2 {
+  margin-top: -56px;
+}
+.grid .mt-1, .grid .m-1 {
+  margin-top: -28px;
+}
+.grid .mt0, .grid .m0 {
+  margin-top: 0;
+}
+.grid .mt1, .grid .m1 {
+  margin-top: 28px;
+}
+.grid .mt2, .grid .m2 {
+  margin-top: 56px;
+}
+.grid .mt3, .grid .m3 {
+  margin-top: 84px;
+}
+.grid .mt4, .grid .m4 {
+  margin-top: 112px;
+}
+.grid .mt5, .grid .m5 {
+  margin-top: 140px;
+}
+
+.grid .mb0 {
+  margin-bottom: 0;
+}
+.grid .mb1 {
+  margin-bottom: 28px;
+}
+.grid .mb2 {
+  margin-bottom: 56px;
+}
+.grid .mb3 {
+  margin-bottom: 84px;
+}
+.grid .mb4 {
+  margin-bottom: 112px;
+}
+.grid .mb5 {
+  margin-bottom: 140px;
+}
+
+.grid .ml0 {
+  margin-left: 0;
+}
+.grid .ml1 {
+  margin-left: 28px;
+}
+.grid .ml2 {
+  margin-left: 56px;
+}
+.grid .ml3 {
+  margin-left: 84px;
+}
+.grid .ml4 {
+  margin-left: 112px;
+}
+.grid .ml5 {
+  margin-left: 140px;
+}
+
+.grid .mr0 {
+  margin-right: 0;
+}
+.grid .mr1 {
+  margin-right: 28px;
+}
+.grid .mr2 {
+  margin-right: 56px;
+}
+.grid .mr3 {
+  margin-right: 84px;
+}
+.grid .mr4 {
+  margin-right: 112px;
+}
+.grid .mr5 {
+  margin-right: 140px;
+}
+
+.grid .g1,
+.grid .g2,
+.grid .g3,
+.grid .g4,
+.grid .g5,
+.grid .g6,
+.grid .g7,
+.grid .g8,
+.grid .g9,
+.grid .g10,
+.grid .g11,
+.grid .g12 {
+  float: left;
+}
+
+.grid iframe {
+  display: block;
+}
+.grid img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+.grid img.natural {
+  width: auto;
+  margin: 0 auto;
+}
+.grid img.inline {
+  display: inline;
+  width: auto;
+  margin: 0 10px;
+  padding: 0;
+}
+
+.grid .pad {
+  padding: 0 20px;
+}
+.grid .box {
+  padding: 14px 20px;
+}
+
+.grid .l {
+  float: left;
+}
+.grid .r {
+  float: right;
+}
+.grid .w {
+  margin-right: -1px;
+}
+.grid .z {
+  height: 0;
+}
+.grid .mz {
+  margin: 0;
+}
+
+/* collapse columns equally by default */
+.grid .g12 {
+  width: 100%;
+}
+.grid .g11 {
+  width: 91.6667%;
+}
+.grid .g10 {
+  width: 83.3333%;
+}
+.grid .g9 {
+  width: 75%;
+}
+.grid .g8 {
+  width: 66.6667%;
+}
+.grid .g7 {
+  width: 58.3333%;
+}
+.grid .g6 {
+  width: 50%;
+}
+.grid .g5 {
+  width: 41.6667%;
+}
+.grid .g4 {
+  width: 33.3333%;
+}
+.grid .g3 {
+  width: 25%;
+}
+.grid .g2 {
+  width: 16.6667%;
+}
+.grid .g1 {
+  width: 8.3333%;
+}
+
+.grid .i12 {
+  margin-left: 100%;
+}
+.grid .i11 {
+  margin-left: 91.6667%;
+}
+.grid .i10 {
+  margin-left: 83.3333%;
+}
+.grid .i9 {
+  margin-left: 75%;
+}
+.grid .i8 {
+  margin-left: 66.6667%;
+}
+.grid .i7 {
+  margin-left: 58.3333%;
+}
+.grid .i6 {
+  margin-left: 50%;
+}
+.grid .i5 {
+  margin-left: 41.6667%;
+}
+.grid .i4 {
+  margin-left: 33.3333%;
+}
+.grid .i3 {
+  margin-left: 25%;
+}
+.grid .i2 {
+  margin-left: 16.6667%;
+}
+.grid .i1 {
+  margin-left: 8.3333%;
+}
+
+.grid .ol1 {
+  position: relative;
+  left: -4.1666%;
+}
+
+.grid .or1 {
+  position: relative;
+  left: 4.1666%;
+}
+
+.grid .g3 .pad {
+  padding: 0 10px;
+}
+.grid .g3 .pad p {
+  margin-left: 0 !important;
+}
+
+p.p0, p.p0 img {
+  margin: 0;
+}
+
+@media only screen and (max-width: 1190px) {
+}
+
+
+@media only screen and (max-width: 960px) {
+  .grid {
+    width: 100%;
+    margin: 0;
+    left: 0;
+  }
+
+  /* collapse margin first if possible */
+  .grid .g8.i2 {
+    position: relative;
+    left: -320px;
+    margin-left: 50%;
+    width: 640px;
+  }
+  .grid .g4.i2 {
+    position: relative;
+    left: -320px;
+    margin-left: 50%;
+    width: 320px;
+    margin-right: -320px;
+  }
+  .grid .g3.i2:not(.ol1):not(.ol2) {
+    position: relative;
+    left: -320px;
+    margin-left: 50%;
+    width: 240px;
+    margin-right: -320px;
+  }
+
+  /* 4 columns too narrow */
+  .grid .g3.c4 {
+    width: 50%;
+  }
+  .grid .g3.c4 .pad {
+    padding: 0 20px;
+  }
+  .grid .g3.c4 + .g3.c4 + .g3.c4 {
+    clear: left;
+  }
+  .grid .g3.c4 + .g3.c4 + .g3.c4 + .g3.c4 {
+    clear: none;
+  }
+ 
+}
+
+/* fluid layout 0-640 */
+@media only screen and (max-width: 640px)  {
+  
+  /* collapse all */
+  .grid .g1,
+  .grid .g2,
+  .grid .g3,
+  .grid .g4,
+  .grid .g5,
+  .grid .g6,
+  .grid .g7,
+  .grid .g8,
+  .grid .g9,
+  .grid .g10,
+  .grid .g11,
+  .grid .g12 {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+    left: 0 !important;
+    position: static !important;
+  }
+  
+  .grid p > img {
+    left: -10px;
+  }
+  
+  .grid aside > p {
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+}
+
+/* expand above 1280 */
+@media only screen and (min-width: 1280px)  {
+  .grid.expand .le {
+    float: left;
+  }
+  .grid.expand .re {
+    float: right;
+  }
+
+  .grid.expand {
+    width: 1280px;
+    margin-left: -640px;
+  }
+  .grid.expand .g12 {
+    width: 960px;
+  }
+  .grid.expand .g11 {
+    width: 880px;
+  }
+  .grid.expand .g10 {
+    width: 800px;
+  }
+  .grid.expand .g9 {
+    width: 720px;
+  }
+  .grid.expand .g8 {
+    width: 640px;
+  }
+  .grid.expand .g7 {
+    width: 560px;
+  }
+  .grid.expand .g6 {
+    width: 480px;
+  }
+  .grid.expand .g5 {
+    width: 400px;
+  }
+  .grid.expand .g4 {
+    width: 320px;
+  }
+  .grid.expand .g3 {
+    width: 240px;
+  }
+  .grid.expand .g2 {
+    width: 160px;
+  }
+  .grid.expand .g1 {
+    width: 80px;
+  }
+
+  .grid.expand .ge16 {
+    width: 1280px;
+  }
+  .grid.expand .ge15 {
+    width: 1200px;
+  }
+  .grid.expand .ge14 {
+    width: 1120px;
+  }
+  .grid.expand .ge13 {
+    width: 1040px;
+  }
+  .grid.expand .ge12 {
+    width: 960px;
+  }
+  .grid.expand .ge11 {
+    width: 880px;
+  }
+  .grid.expand .ge10 {
+    width: 800px;
+  }
+  .grid.expand .ge9 {
+    width: 720px;
+  }
+  .grid.expand .ge8 {
+    width: 640px;
+  }
+  .grid.expand .ge7 {
+    width: 560px;
+  }
+  .grid.expand .ge6 {
+    width: 480px;
+  }
+  .grid.expand .ge5 {
+    width: 400px;
+  }
+  .grid.expand .ge4 {
+    width: 320px;
+  }
+  .grid.expand .ge3 {
+    width: 240px;
+  }
+  .grid.expand .ge2 {
+    width: 160px;
+  }
+  .grid.expand .ge1 {
+    width: 80px;
+  }
+}
+
+.grid .wide {
+  clear: both;
+}

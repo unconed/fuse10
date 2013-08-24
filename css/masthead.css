@@ -1,0 +1,320 @@
+html.js #masthead, #arrow {
+  display: none;
+}
+html.no-js #masthead #play {
+  display: none;
+}
+
+html.no-js #masthead {
+  position: absolute;
+  left: 55.5%;
+  padding-top: 31%;
+}
+html.no-js #masthead h1,
+html.no-js #masthead h2 {
+  font-size: 36px;
+  line-height: 48px;
+  text-shadow: none;
+  margin: 0;
+}
+html.no-js #masthead h2 {
+  font-size: 26px;
+}
+html.no-js #masthead .bubble {
+  height: 24px;
+  width: 24px;
+  font-size: 22px;
+  margin-left: 4px;
+  margin-bottom: 5px;
+  line-height: 44px;
+}
+
+@media only screen and (max-width: 1280px) {
+  html.no-js #masthead h1,
+  html.no-js #masthead h2 {
+    font-size: 31px;
+    line-height: 41px;
+    text-shadow: none;
+    margin: 0;
+  }
+  html.no-js #masthead h2 {
+    font-size: 22px;
+  }
+  html.no-js #masthead .bubble {
+    height: 20px;
+    width: 20px;
+    font-size: 18px;
+    margin-left: 3px;
+    margin-bottom: 4px;
+    line-height: 37px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  html.no-js #masthead h1,
+  html.no-js #masthead h2 {
+    font-size: 25px;
+    line-height: 33px;
+    text-shadow: none;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  html.no-js #masthead h2 {
+    font-size: 18px;
+  }
+  html.no-js #masthead .bubble {
+    height: 17px;
+    width: 17px;
+    font-size: 14px;
+    margin-left: 3px;
+    margin-bottom: 4px;
+    line-height: 34px;
+  }
+  7
+}
+
+@media only screen and (max-width: 580px) {
+  html.no-js #masthead h1,
+  html.no-js #masthead h2 {
+    font-size: 22px;
+    line-height: 29px;
+    text-shadow: none;
+    margin: 0;
+  }
+  html.no-js #masthead h2 {
+    font-size: 17px;
+  }
+  html.no-js #masthead .bubble {
+    height: 14px;
+    width: 14px;
+    font-size: 12px;
+    margin-left: 2px;
+    margin-bottom: 3px;
+    line-height: 32px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  html.no-js #masthead h1,
+  html.no-js #masthead h2 {
+    font-size: 18px;
+    line-height: 24px;
+    text-shadow: none;
+    margin: 0;
+  }
+  html.no-js #masthead h2 {
+    font-size: 13px;
+  }
+  html.no-js #masthead .bubble {
+    height: 12px;
+    width: 12px;
+    font-size: 10px;
+    margin-left: 2px;
+    margin-bottom: 3px;
+    line-height: 30px;
+  }
+}
+
+
+#masthead {
+  z-index: 2;
+  text-align: center;
+  line-height: 56px;
+}
+
+#masthead h1 {
+  margin-top: 0px;
+  font-size: 74px;
+  line-height: 80px;
+  margin-bottom: 32px;
+}
+#masthead h1 > span {
+  color: rgb(153,175,187);
+}
+#masthead h2 {
+  margin-top: -15px;
+  font-size: 54px;
+}
+
+#masthead #play {
+  pointer-events: auto;
+  cursor: pointer;
+  margin: 0 auto 40px;
+  width: 168px;
+  height: 168px;
+  border-radius: 168px;
+  background: rgb(153,175,187);
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  color: #fff;
+  font-size: 96px;
+  padding-top: 10px;
+  padding-left: 11px;
+  line-height: 168px;
+
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+
+#masthead #play:hover {
+  background: rgb(197,42,24);
+}
+
+#masthead #play:active {
+  background: rgb(235,89,51);
+}
+
+#masthead a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+}
+#masthead a:hover {
+  color: rgb(100,188,202);
+}
+
+#masthead .bubble {
+  color: rgb(255,255,255);
+  background: rgb(153,175,187);
+  border-radius: 32px;
+  height: 36px;
+  width: 36px;
+  text-shadow: none;
+  font-size: 32px;
+  font-weight: normal;
+  display: inline-block;
+  margin-left: 20px;
+  border: 3px solid white;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+#masthead .bubble span {
+  position: relative;
+  left: -1px;
+  top: -8px;
+}
+
+#masthead.shadow {
+  z-index: 1;
+  pointer-events: none;
+  cursor: inherit;
+}
+
+#masthead.shadow .bubble {
+  border-color: rgb(148,171,175);
+  background: rgb(148,171,175);
+}
+
+#masthead.shadow #play {
+  background: rgb(120,139,149);
+}
+
+#masthead.shadow #play.hover {
+  background: rgb(139,30,17);
+}
+
+#masthead.shadow #play {
+  cursor: inherit;
+}
+
+#masthead h1, #masthead h2 {
+  text-shadow:
+    5px 0px 2px rgb(255, 255, 255),
+    -5px 0px 2px rgb(255, 255, 255),
+    0px -5px 2px rgb(255, 255, 255),
+    0px 5px 2px rgb(255, 255, 255),
+    4px 4px 2px rgb(255, 255, 255),
+    -4px 4px 2px rgb(255, 255, 255),
+    4px -4px 2px rgb(255, 255, 255),
+    -4px -4px 2px rgb(255, 255, 255),
+    5px 4px 2px rgb(255, 255, 255),
+    -5px 4px 2px rgb(255, 255, 255),
+    5px -4px 2px rgb(255, 255, 255),
+    -5px -4px 2px rgb(255, 255, 255),
+    2px 5px 2px rgb(255, 255, 255),
+    -2px 5px 2px rgb(255, 255, 255),
+    2px -5px 2px rgb(255, 255, 255),
+    -2px -5px 2px rgb(255, 255, 255),
+    -2px -2px 2px rgb(255, 255, 255),
+    -2px 2px 2px rgb(255, 255, 255),
+    2px -2px 2px rgb(255, 255, 255),
+    2px 2px 2px rgb(255, 255, 255);
+}
+
+#masthead.shadow h1, #masthead.shadow h2 {
+  color: rgb(148,171,175);
+  text-shadow:
+    5px 0px 2px rgb(148,171,175),
+    -5px 0px 2px rgb(148,171,175),
+    0px -5px 2px rgb(148,171,175),
+    0px 5px 2px rgb(148,171,175),
+    4px 4px 2px rgb(148,171,175),
+    -4px 4px 2px rgb(148,171,175),
+    4px -4px 2px rgb(148,171,175),
+    -4px -4px 2px rgb(148,171,175),
+    5px 4px 2px rgb(148,171,175),
+    -5px 4px 2px rgb(148,171,175),
+    5px -4px 2px rgb(148,171,175),
+    -5px -4px 2px rgb(148,171,175),
+    2px 5px 2px rgb(148,171,175),
+    -2px 5px 2px rgb(148,171,175),
+    2px -5px 2px rgb(148,171,175),
+    -2px -5px 2px rgb(148,171,175),
+    -2px -2px 2px rgb(148,171,175),
+    -2px 2px 2px rgb(148,171,175),
+    2px -2px 2px rgb(148,171,175),
+    2px 2px 2px rgb(148,171,175);
+}
+
+#arrow.shadow {
+  z-index: 1;
+}
+#arrow {
+  z-index: 2;
+}
+
+#arrow.shadow .icon-arrow span:nth-child(1) {
+  background: rgb(120,139,149);
+}
+#arrow.shadow .icon-arrow span:nth-child(2) {
+  border-left-color: rgb(120,139,149);
+}
+
+#clickme {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  margin-left: -84px;
+  margin-top: -84px;
+
+  width: 168px;
+  height: 168px;
+  border-radius: 168px;
+  background: rgb(153,175,187);
+
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  color: #fff;
+  font-size: 96px;
+  padding-top: 10px;
+  padding-left: 46px;
+  line-height: 168px;
+
+  box-shadow: 0px 4px 0px rgb(120, 139, 149),
+              0px 0px 100px rgba(255, 255, 255, 1),
+              0px 0px 50px rgba(255, 255, 255, 1),
+              0px 0px 10px rgba(255, 255, 255, 1);
+  z-index: 5;
+  
+  cursor: pointer;
+}
+

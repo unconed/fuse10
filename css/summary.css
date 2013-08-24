@@ -1,0 +1,80 @@
+article.summary {
+  position: relative;
+  margin-bottom: 46px;
+}
+article.summary .image {
+  overflow: hidden;
+  border-radius: 7px;
+  width: 100%;
+  padding-bottom: 55.681%;
+  background-size: 100% 100%;
+  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+article.summary .image img {
+  display: none;
+}
+article.summary h1 {
+  margin: 27px 0 0;
+  padding: 0;
+}
+article.summary p {
+  margin: 18px 0 0;
+  padding: 0;
+}
+article.summary {
+  text-align: center;
+}
+article.summary .info p {
+  min-height: 56px;
+}
+
+.legend {
+  margin: 0 0 21px;
+}
+.legend h1 {
+  margin-top: 0;
+  margin-bottom: 21px;
+}
+
+.featured-legend h1 {
+  padding-top: 30px;
+  clear: left;
+}
+
+.about-legend h1 {
+  margin-top: 30px;
+}
+
+.about p {
+  margin-top: 31px;
+}
+.about {
+  text-align: center;
+}
+
+article.summary .image, .tv .image, .toys .image {
+  transition: opacity .3s ease-out;
+  -webkit-transition: opacity .3s ease-out;
+}
+.cold article.summary .image, .cold .tv .image, .cold .toys .image {
+  background-image: none !important;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 1280px)  {
+
+  .featured-legend h1 {
+    padding-top: 7px;
+    clear: left;
+  }
+
+  .about-legend h1 {
+    margin-top: 12px;
+  }
+
+  .about {
+    text-align: left;
+  }
+
+}

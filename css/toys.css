@@ -1,0 +1,153 @@
+.toys .image, .tv .image {
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.image .play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 58px;
+  font-size: 28px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-left: 4px;
+  border-radius: 25px;
+  color: #fff;
+  background: rgb(153,175,187);
+  box-shadow: 0 2px 0 rgba(120,139,149,1);
+}
+
+.toys .image img, .tv .image img {
+  display: none;
+}
+
+.toys .image {
+  margin: 0 0.7608% 0.7608% 0;
+  width: 11.739%;
+  padding-bottom: 11.739%;
+}
+
+@media only screen and (max-width: 960px)  {
+  .toys .image {
+    float: left;
+    margin: 0 1.0869% 1.0869% 0;
+    width: 15.579%;
+    padding-bottom: 15.579%;
+  }
+}
+@media only screen and (max-width: 640px)  {
+  .toys .image {
+    float: left;
+    margin: 0 1.5217% 1.5217% 0;
+    width: 23.478%;
+    padding-bottom: 23.478%;
+  }
+}
+
+.tv .image {
+  width: 100%;
+  padding-bottom: 56.0714%;
+}
+
+.tv h1 {
+  margin: 0;
+  padding: 27px 0 18px;
+  text-align: center;
+  clear: both;
+}
+
+a .image {
+  opacity: .85;
+  transition: .08s opacity ease-in-out;
+  -webkit-transition: .08s opacity ease-in-out;
+}
+a:hover .image {
+  opacity: 1;
+}
+
+.tv {
+  clear: both;
+}
+
+.toys {
+  margin-bottom: 27px;
+  float: left;
+  width: 100%;
+}
+
+.tv-legend {
+  margin-top: 7px;
+}
+
+.toys-legend {
+  margin-top: 51px;
+}
+
+.tv-player {
+  max-width: 100%;
+}
+
+.tv-meta img {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1),
+              0 0 2px rgba(0, 0, 0, .1);
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+@media only screen and (max-width: 640px)  {
+  .tv h1 {
+    margin-bottom: 56px;
+    padding-bottom: 0;
+  }  
+}
+
+@media only screen and (min-width: 1280px)  {
+
+  .toys .image {
+    margin: 0 2.5% 2.5% 0;
+    width: 47.5%;
+    padding-bottom: 47.5%;
+  }
+
+  .tv {
+    clear: none;
+  }
+
+  .tv .image {
+    padding-bottom: 56.4285%;
+  }
+
+  .tv h1 {
+    padding: 20px 0 46px;
+  }
+
+  .tv .spacer {
+    clear: right;
+    padding-top: 7px;
+  }
+
+  .toys-legend {
+    margin-top: 0;
+  }
+
+  .tv-legend {
+    margin-top: 0;
+  }
+
+}

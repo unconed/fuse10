@@ -1,0 +1,72 @@
+.growl {
+  position: fixed;
+  top: 28px;
+  right: 28px;
+  z-index: 1000;
+}
+.growl.center {
+  left: 50%;
+  margin-left: -148px;
+  top: auto;
+  bottom: 28px;
+}
+.growl.link:hover {
+  border: 2px solid #fff;
+}
+.growl {
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0);
+  padding: 8px;
+  width: 296px;
+  height: 56px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+  opacity: 0;
+  
+  background: rgba(0, 0, 0, .7) no-repeat 12px 8px;
+  background-size: 56px 56px;
+
+  transform: perspective(800px) translateY(20px) rotateX(30deg) translateZ(-40px);
+  -webkit-transform: perspective(800px) translateY(20px) rotateX(30deg) translateZ(-40px);
+
+  transition: opacity .3s ease-out, transform .3s ease-out;
+  -webkit-transition: opacity .3s ease-out, -webkit-transform .3s ease-out;
+}
+
+.growl > div {
+  display: table-cell;
+  vertical-align: middle;
+  font: inherit;
+  height: 56px;
+  padding-left: 74px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  width: 296px;
+}
+.growl.pop {
+  opacity: 1;
+
+  transform: perspective(800px) translateY(0px) translateZ(0px) rotateX(0deg);
+  -webkit-transform: perspective(800px) translateY(0px) translateZ(0px) rotateX(0deg);
+}
+
+.growl.out {
+  transform: perspective(800px) translateY(84px) translateZ(-40px) rotateX(-30deg);
+  -webkit-transform: perspective(800px) translateY(84px) translateZ(-40px) rotateX(-30deg);
+
+  transition: opacity .2s ease-in, transform .3s ease-in;
+  -webkit-transition: opacity .2s ease-in, -webkit-transform .3s ease-in;
+}
+
+.growl.achievement {
+  background-image: url('images/growl-01.png') ;
+}
+
+.growl.info {
+  background-image: url('images/growl-02.png') ;
+}
+
+.growl.music {
+  background-image: url('images/growl-03.png') ;
+}

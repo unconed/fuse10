@@ -1,0 +1,95 @@
+nav {
+  padding-bottom: 15px;
+  line-height: 22px;
+  position: relative;
+}
+
+nav .arrow {
+  position: absolute;
+  top: 0;
+}
+
+nav .prev .arrow {
+  left: 0;
+  transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
+
+nav .next .arrow {
+  right: 0;
+}
+
+nav .prev, nav .next {
+  position: absolute;
+  top: 0;
+  max-width: 50%;
+  z-index: 10;
+}
+
+nav .prev {
+  left: 10px;
+}
+
+nav .next {
+  right: 10px;
+  text-align: right;
+}
+
+nav a {
+  padding: 0px 10px;
+  display: block;
+}
+
+nav .prev a {
+  padding-left: 0;
+}
+
+nav .next a {
+  padding-right: 0;
+}
+
+nav .caption {
+  position: relative;
+  top: -28px;
+}
+
+nav .caption span {
+  height: 112px;
+  display: table-cell;
+  vertical-align: middle;
+  max-width: 80px;
+}
+
+nav .prev .caption span {
+  padding-left: 60px;
+}
+
+nav .next .caption span {
+  padding-right: 60px;
+}
+
+nav a, nav .arrow {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.repeat nav {
+  margin-top: 4px;
+}
+
+@media only screen and (max-width: 960px) {
+  nav {
+    height: 64px;
+  }
+  nav .caption {
+    max-width: none;
+  }
+  .repeat nav {
+    height: 0;
+  }
+}
+
+.repeat + footer {
+  margin-top: -50px;
+}

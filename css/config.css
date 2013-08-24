@@ -1,0 +1,115 @@
+.config {
+  cursor: default;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  width: 300px;
+  color: #fff;
+  text-shadow: 0px 1px rgba(0, 0, 0, .3);
+
+  transition: transform .3s ease-in-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+
+  transform: translateZ(0px);
+  -webkit-transform: translateZ(0px);
+}
+.config.collapsed {
+  transform: translate3d(0, -157px, 0);
+  -webkit-transform: translate3d(0, -157px, 0);
+}
+.config .bg {
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 210px solid rgba(92,100,114, .75);
+  border-left: 439px solid transparent;
+  pointer-events: none;
+}
+.config .achievements {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.config .achievements span {
+  float: left;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background: rgba(92,100,114, 1);
+  background-size: 100%;
+  margin-left: 1px;
+}
+
+.config .resolution span {
+  margin-left: 14px;
+}
+
+.config .status {
+  position: absolute;
+  top: 67px;
+  right: 23px;
+}
+
+.config .box {
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 8px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  background: 1px solid rgba(255, 255, 255, .2);
+  position: relative;
+  top: -1px;
+  margin-right: 6px;
+  box-shadow: 0px 1px rgba(0, 0, 0, .3);
+  box-shadow: 0px 1px rgba(0, 0, 0, .3),
+              inset 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+.config .style {
+  position: absolute;
+  right: 22px;
+  top: 95px;
+}
+.config .style select {
+  margin: 0 0 0 14px;
+  border: 0;
+  padding: 0;
+
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 85%;
+  line-height: inherit;
+
+  background: none;
+  color: rgb(230,237,240);
+  -webkit-font-smoothing: antialiased;
+}
+.config select option {
+  color: rgb(92,100,114);
+}
+.config .fps {
+  position: absolute;
+  right: 20px;
+  top: 123px;
+}
+.config .fps input {
+  margin-left: 14px;
+}
+
+.config .gear {
+  position: absolute;
+  right: 0px;
+  top: 157px;
+  padding-left: 52px;
+  padding-top: 8px;
+  width: 58px;
+  text-align: center;
+  cursor: pointer;
+  opacity: .5;
+  transition: opacity .15s ease-out;
+  -webkit-transition: opacity .15s ease-out;
+}
+.config .gear:hover {
+  opacity: 1;
+}

@@ -1,0 +1,413 @@
+body {
+  font-size: 16px;
+  line-height: 28px;
+
+  font-family: 'klavika-web', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  
+  color: #353535;
+}
+
+h1 {
+  font-family: 'klavika-web', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: -1px;
+  
+  font-size: 36px;
+}
+
+h2 {
+  font-family: 'Klavika-web', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: -1px;
+  
+  font-size: 26px;
+}  
+
+h3 {
+  font-family: 'Klavika-web', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: -1px;
+  
+  font-size: 22px;
+}  
+
+h1, h2 {
+  color: rgb(71,108,136);
+  margin: 28px 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+p, ul, ol {
+  margin: 28px 0;
+  padding: 0;
+}
+
+h1, h2 {
+  text-shadow:
+    3px 0px 1px rgb(255, 255, 255),
+    -3px 0px 1px rgb(255, 255, 255),
+    0px -3px 1px rgb(255, 255, 255),
+    0px 3px 1px rgb(255, 255, 255),
+    2px 2px 1px rgb(255, 255, 255),
+    -2px 2px 1px rgb(255, 255, 255),
+    2px -2px 1px rgb(255, 255, 255),
+    -2px -2px 1px rgb(255, 255, 255),
+    3px 2px 1px rgb(255, 255, 255),
+    -3px 2px 1px rgb(255, 255, 255),
+    3px -2px 1px rgb(255, 255, 255),
+    -3px -2px 1px rgb(255, 255, 255),
+    1px 3px 1px rgb(255, 255, 255),
+    -1px 3px 1px rgb(255, 255, 255),
+    1px -3px 1px rgb(255, 255, 255),
+    -1px -3px 1px rgb(255, 255, 255),
+    -1px -1px 1px rgb(255, 255, 255),
+    -1px 1px 1px rgb(255, 255, 255),
+    1px -1px 1px rgb(255, 255, 255),
+    1px 1px 1px rgb(255, 255, 255);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p a, ol a, ul a, article.full a {
+  color: rgb(82,164,190);
+  color: rgb(71,108,136);
+  font-style: italic;
+  border-bottom: 1px dotted rgb(153,175,187);
+}
+nav a:hover, p a:hover, ol a:hover, ul a:hover {
+  color: rgb(80,123,155);
+  color: rgb(100,188,202); 
+}
+
+.summary h1, .tv h1 {
+  font-size: 32px;
+  font-weight: normal;
+  text-shadow: none;
+}
+.summary h1 {
+  color: rgb(68,78,83);
+}
+.summary p {
+  color: rgb(90,103,110);
+}
+.legend {
+  min-height: 28px;
+}
+.legend h1 {
+  font-size: 26px;
+  color: rgb(153,175,187);
+}
+.tv h1 {
+  color: rgb(90,103,110);
+}
+@media only screen and (min-width: 1280px)  {
+  .tv h1 {
+    font-size: 26px;
+  }
+}
+.about .legend {
+  margin-bottom: 28px;
+}
+.about p {
+  margin-left: 0;
+  color: rgb(90,103,110);
+  color: rgb(153,175,187);
+}
+
+p.copy, .slideshow .pages {
+  text-align: center;
+  color: rgb(153,175,187);
+}
+
+h2 {
+  margin-top: 56px;
+}
+
+h1 + h2, h2.sub {
+  margin-top: -3px;
+  margin-bottom: 31px;
+  color: rgb(82,164,190);
+}
+
+time {
+  color: rgb(153,175,187);
+}
+
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+
+code {
+  font-size: 14px;
+  margin: 0 2px;
+  background: rgb(242,242,242);
+  padding: 2px;
+}
+
+code:first-child {
+  margin: 0 2px 0 0;
+}
+
+p.codeblock, p.textblock {
+  margin: 42px 20px;
+  background: #eee !important;
+}
+
+p.textblock {
+  padding: 20px;
+}
+
+p.codeblock code {
+  background: none;
+  font-size: 12px;
+  line-height: 14px;
+  margin: -14px 0px;
+  padding: 20px;
+  display: block;
+}
+
+code {
+  font-family: "Bitstream Vera Sans Mono", "Andale Mono", Monaco, monospace;
+}
+
+p.codeblock {
+  line-height: 14px;
+}
+
+aside {
+  font-style: italic;
+}
+
+.obf {
+  float: left;
+  user-select: none;
+  padding-right: 5px;
+}
+.obf span {
+  float: right;
+}
+
+.tags, .tags a {
+  color: rgb(153,175,187);
+}
+
+a.subscribe {
+  border: 0;
+}
+a:hover .icon-feed span:nth-child(1) {
+  background: rgb(82, 164, 190);
+}
+a:hover .icon-feed span:nth-child(2),
+a:hover .icon-feed span:nth-child(3) {
+  border-right-color: rgb(82, 164, 190);
+}
+
+
+nav a {
+  font-family: 'Klavika-web', sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: -1px;
+  
+  font-size: 20px;
+  color: rgb(153,175,187);
+}
+nav a:hover,
+nav a:active {
+  color: rgb(82, 164, 190);
+}
+nav a:hover .icon-arrow span:nth-child(1),
+nav a:active .icon-arrow span:nth-child(1),
+.nav a:hover .icon-arrow span:nth-child(1),
+.nav a:active .icon-arrow span:nth-child(1) {
+  background: rgb(82, 164, 190);
+}
+nav a:hover .icon-arrow span:nth-child(2),
+nav a:active .icon-arrow span:nth-child(2),
+.nav a:hover .icon-arrow span:nth-child(2),
+.nav a:active .icon-arrow span:nth-child(2) {
+  border-left-color: rgb(82, 164, 190);
+}
+.nav a:hover .icon-repeat span:nth-child(1) {
+  border-left-color: rgb(82, 164, 190);
+  border-top-color: rgb(82, 164, 190);
+}
+.nav a:hover .icon-repeat span:nth-child(2) {
+  border-right-color: rgb(82, 164, 190);
+  border-bottom-color: rgb(82, 164, 190);
+}
+.nav a:hover .icon-repeat span:nth-child(3) {
+  border-left-color: rgb(82, 164, 190);
+}
+.nav a:hover .icon-repeat span:nth-child(4) {
+  border-right-color: rgb(82, 164, 190);
+}
+
+
+/* everything is transparent so avoid artifacts */
+html.js body {
+  -webkit-font-smoothing: antialiased;
+}
+html.js .growl {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.tv-meta aside {
+  color: rgb(153,175,187);
+}
+
+h1.h0 {
+  font-size: 144px;
+}
+
+/* serif */
+body .serif, .serif h1, .serif h2, .serif h3, .serif em, .serif a, .serif acronym, .serif p acronym {
+  font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif;
+  line-height: 36px;
+  color: #000;
+}
+html.js body .serif, html.js .serif h1, html.js .serif h2, html.js .serif h3, html.js .serif em, html.js .serif a, html.js .serif acronym, html.js .serif p acronym {
+  -webkit-font-smoothing: antialiased;
+}
+.serif em, .serif a {
+  color: #444;
+}
+.serif h1,
+.serif h2,
+.serif h3,
+.serif h4,
+.serif p,
+.serif ul,
+.serif ol,
+.serif dl {
+  margin: 36px 0;
+  font-style: normal;
+}
+.serif li {
+  margin: 18px 0;
+}
+.serif ul.flat {
+  margin: 9px 0;
+}
+
+.serif h1, .serif h1 a {
+  margin: 36px 0 36px 0;
+  line-height: 54px;
+}
+.serif h2, .serif h2 a {
+  margin: 54px 0 18px 0;
+  font-size: 36px;
+}
+
+em.big {
+  margin: 0;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -1px;
+}
+
+span.invisible {
+  font-size: 0;
+  position: relative;
+  left: -10000px;
+}
+
+big {
+  font-size: 120%;
+}
+small {
+  font-size: 85%;
+}
+
+
+/* math coloring */
+.purple {
+  color: #B940A5;
+}
+.green {
+  color: #30A040;
+}
+.blue {
+  color: #3080F0;
+}
+.red {
+  color: #C02050;
+}
+.orangered {
+  color: #c53c09;
+}
+.teal {
+  color: #50a5c0;
+}
+.white {
+  color: #fff;
+}
+.cyan {
+  color: #30A0B0;
+}
+.gold {
+  color: #db8101;
+}
+.grey, .gray {
+  color: #a9a9a9;
+}
+.slate {
+  color: #5070A0;
+}
+.orange {
+  color: #FF9703;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: #aaa;
+}
+.strike > span {
+  color: #999;
+}
+
+
+
+kbd {
+  font-family: 'klavika-web', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+
+  font-size: 14px;
+  text-shadow: 0 0 0.5px rgba(0, 0, 0, .1);
+}
+kbd {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 4px;
+
+  background-image: linear-gradient(bottom, rgb(214,214,214) 0%, rgb(240,240,240) 84%);
+  background-image: -o-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(240,240,240) 84%);
+  background-image: -moz-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(240,240,240) 84%);
+  background-image: -webkit-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(240,240,240) 84%);
+  background-image: -ms-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(240,240,240) 84%);
+
+  background-image: -webkit-gradient(
+  	linear,
+  	left bottom,
+  	left top,
+  	color-stop(0, rgb(214,214,214)),
+  	color-stop(0.84, rgb(240,240,240))
+  );  
+}

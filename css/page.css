@@ -1,0 +1,74 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+html.js #fixed-frame {
+  overflow: hidden;
+	z-index: 2;
+}
+
+html.js #fixed-frame > #camera-frame > * {
+  margin: 0;
+  padding: 0;
+}
+
+html.js #native-frame {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5000px;
+  z-index: 3;
+}
+
+html.js #native-frame > div {
+	z-index: 3;
+
+  transform: translateZ(0px);
+  -webkit-transform: translateZ(0px);
+}
+
+html.js body > canvas.frame {
+  z-index: 1;
+}
+
+#stats {
+  left: 0;
+  top: 0;
+}
+
+html.no-js body {
+  background: #fff url(images/fallback.jpg) 50% 0 no-repeat;
+  background-size: 100%;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  html.no-js body {
+    background: #fff url(images/fallback-retina.jpg) 50% 0 no-repeat;
+  }
+}
+
+@media only screen and (max-device-width: 1024px) { 
+  html.no-js body {
+    background: #fff url(/css/images/fallback.jpg) 50% 0 no-repeat;
+  }
+}
+
+html.no-js #native-frame {
+  padding-top: 41%;
+}
+
+html.no-js #fixed-frame {
+  height: 0;
+  bottom: auto;
+}
+
+.pointer-punch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: auto;
+}

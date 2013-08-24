@@ -1,0 +1,149 @@
+.slideshow {
+  position: relative;
+  background: #fff;
+}
+
+iframe.mathbox.square, iframe.mathbox.fit {
+  /*
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1),
+              0 0 2px rgba(0, 0, 0, .1);
+              */
+}
+iframe.mathbox {
+  
+}
+
+.slideshow .nav {
+  height: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  position: relative;
+  z-index: 10;
+}
+
+.slideshow.compact {
+  margin-bottom: 84px;
+}
+
+.slideshow.compact .nav {
+  width: 188px;
+}
+
+.slideshow.compact .nav .pages {
+  display: none;
+}
+
+.slideshow.compact .steps {
+  display: none;
+}
+
+.slideshow .prev,
+.slideshow .again,
+.slideshow .next {
+  position: absolute;
+  height: 56px;
+  width: 56px;
+  border: 0;
+  top: 21px;
+  cursor: pointer;
+  transition: .1s opacity ease-in-out;
+  -webkit-transition: .1s opacity ease-in-out;
+
+}
+
+.slideshow .prev {
+  left: 10px;
+  text-align: right;
+}
+.slideshow .again {
+  left: 66px;  
+}
+.slideshow .next {
+  left: 122px;
+  text-align: right;
+}
+
+.slideshow .nav .inactive {
+  cursor: default;
+  pointer-events: none;
+  opacity: .3;
+}
+
+.slideshow .pages {
+  position: absolute;
+  left: 10px;
+  top: 91px;
+  height: 28px;
+  width: 168px;
+  text-align: center;
+}
+
+.slideshow .steps {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  height: 196px;
+  margin-bottom: 56px;
+}
+
+.slideshow .steps > .step {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 21px;
+  padding-left: 250px;
+}
+.slideshow .steps > .step p {
+  margin-top: 0;
+  opacity: 0;
+  transition: .2s opacity ease-in-out;
+  -webkit-transition: .2s opacity ease-in-out;
+}
+
+.slideshow .steps > .step.active p {
+  opacity: 1;
+  transition: .2s opacity ease-in-out .3s;
+  -webkit-transition: .2s opacity ease-in-out .3s;
+}
+
+.slideshow .steps > .step .extra {
+  position: absolute;
+  opacity: 0;
+  font-size: 24px;
+  text-shadow:
+    3px 0 1px #fff,
+    -3px 0 1px #fff,
+    0px -3px 1px #fff,
+    0px 3px 1px #fff,
+    2px 2px 1px #fff,
+    -2px 2px 1px #fff,
+    2px -2px 1px #fff,
+    -2px -2px 1px #fff,
+    3px 2px 1px #fff,
+    -3px 2px 1px #fff,
+    3px -2px 1px #fff,
+    -3px -2px 1px #fff,
+    1px 3px 1px #fff,
+    -1px 3px 1px #fff,
+    1px -3px 1px #fff,
+    -1px -3px 1px #fff,
+    -1px -1px 1px #fff,
+    -1px 1px 1px #fff,
+    1px -1px 1px #fff,
+    1px 1px 1px #fff;
+
+  transition: .3s opacity ease-in-out .15;
+  -webkit-transition: .3s opacity ease-in-out .15;
+}
+.slideshow .steps > .step .extra.active {
+  opacity: 1;
+  transition: .3s opacity ease-in-out;
+  -webkit-transition: .3s opacity ease-in-out;
+}
+
+.slideshow .nav .prev {
+  transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+}
