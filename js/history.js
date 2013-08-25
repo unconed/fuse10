@@ -117,7 +117,7 @@ Acko.History.prototype = {
         }
 
         el.addEventListener('click', function (e) {
-          if (e.ctrlKey || e.metaKey) return;
+          if (e.ctrlKey || e.metaKey || e.button !== 0) return;
 
           e.preventDefault();
           history.go(-1);
