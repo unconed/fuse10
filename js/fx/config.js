@@ -9,7 +9,7 @@ Acko.Effect.Config = function () {
   this.renderer = 'webgl';
 
   this.skip = 0;
-  this.last = null;
+  this.last = Infinity;
 }
 
 Acko.Effect.Config.prototype = _.extend(new Acko.Effect(), {
@@ -122,7 +122,7 @@ Acko.Effect.Config.prototype = _.extend(new Acko.Effect(), {
     }
 
     if (!(this.skip % 30)) {
-      if (this.last != localStorage.achievements) {
+      if (this.last !== localStorage.achievements) {
         this.last = localStorage.achievements;
 
         var html = [];

@@ -51,12 +51,14 @@ html.no-js body {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   html.no-js body {
     background: #fff url(images/fallback-retina.jpg) 50% 0 no-repeat;
+    background-size: 100%;
   }
 }
 
 @media only screen and (max-device-width: 1024px) { 
   html.no-js body {
     background: #fff url(images/fallback.jpg) 50% 0 no-repeat;
+    background-size: 100%;
   }
 }
 
