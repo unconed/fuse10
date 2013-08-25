@@ -189,7 +189,7 @@ Acko.Behaviors.push(function () {
         if (local) {
           el.addEventListener('click', function (e) {
             if (el.classList.contains('history-back')) return;
-            if (e.ctrlKey || e.metaKey) return;
+            if (e.ctrlKey || e.metaKey || e.button !== 0) return;
             e.preventDefault();
 
             var reverse = el.classList.contains('reverse');
