@@ -1,14 +1,14 @@
 .growl {
   position: fixed;
-  top: 28px;
-  right: 28px;
+  top: 34px;
+  right: 34px;
   z-index: 1000;
 }
 .growl.center {
   left: 50%;
   margin-left: -148px;
   top: auto;
-  bottom: 28px;
+  bottom: 34px;
 }
 .growl.link:hover {
   border: 2px solid #fff;

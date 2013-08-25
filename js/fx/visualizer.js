@@ -46,6 +46,8 @@ Acko.Effect.Visualizer.prototype = _.extend(new Acko.Effect(), {
 
     gl.resize(true);
 
+    this.masthead.showArrow = 0;
+
     this.volume = 1;
     this.playing = true;
     this.startedAt = null;
@@ -78,6 +80,8 @@ Acko.Effect.Visualizer.prototype = _.extend(new Acko.Effect(), {
   stop: function () {
     this.playing = false;
 
+    this.masthead.showArrow = 1;
+
     if (this.audio) {
       try {
         this.audio.currentTime = 0;
@@ -109,10 +113,6 @@ Acko.Effect.Visualizer.prototype = _.extend(new Acko.Effect(), {
     var tg = this.tracks.visibleGroup;
     var tdg = this.tracks.depthGroup;
     var bg = this.background.group;
-
-    if (this.masthead) {
-      this.masthead.showArrow = !this.playing || (time < 0.1);
-    }
 
     if (!this.playing) {
       tg.useQuaternion = tdg.useQuaternion = bg.useQuaternion = false;
@@ -152,7 +152,7 @@ Acko.Effect.Visualizer.prototype = _.extend(new Acko.Effect(), {
     this.level = this.level + (target - this.level) * .05;
     if (this.audio) {
       try {
-        this.audio.volume = this.level * fade;
+        this.audio.volume = this.level * fade * Acko.globalVolume;
       } catch (e) {};
     }
 

@@ -301,6 +301,10 @@ Acko.Effect.Camera.prototype = _.extend(new Acko.Effect(), {
     // Ride
     if (!this.audioWaiting && this.ride) {
 
+      try {
+        this.audio.volume = Acko.globalVolume;
+      } catch (e) {};
+
       // Slave clock to audio
       var delta = this.audio.currentTime == 0 ? 0 : exports.delta / Time.getSpeed();
       delta = Math.max(.00001, delta);
@@ -731,7 +735,7 @@ Acko.Effect.Camera.prototype = _.extend(new Acko.Effect(), {
     var fade = 1;
     var interval = setInterval(function () {
       fade = fade * .95;
-      audio.volume = fade;
+      audio.volume = fade * Acko.globalVolume;
 
       if (fade < .001) {
         audio.pause();

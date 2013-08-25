@@ -22,6 +22,8 @@ Acko.Effect.Config.prototype = _.extend(new Acko.Effect(), {
 
     var style = "<div class=\"style\"><label>Style<select><option value=\"normal\">Normal</option><option value=\"ssao\">SSAO</option><option value=\"ega\">EGA</option></select></label></div>";
 
+    var mute = "<div class=\"mute\"><label>Mute Sound<input type=\"checkbox\"></label></div>";
+
     var fps = "<div class=\"fps\"><label>Stats<input type=\"checkbox\"></label></div>";
 
     var icon = '<div class="gear"><span class="icon-gear"><span></span><span></span><span></span><span></span><span></span></span></div>';
@@ -33,10 +35,11 @@ Acko.Effect.Config.prototype = _.extend(new Acko.Effect(), {
     div.style.opacity = 0;
     document.body.appendChild(div);
 
-    div.innerHTML = bg + achievements + status + style + fps + icon;
+    div.innerHTML = bg + achievements + status + style + mute + fps + icon;
 
     this.resolution = div.querySelector('.resolution');
     this.select = div.querySelector('.style select');
+    this.mute = div.querySelector('.mute input');
     this.fps = div.querySelector('.fps input');
     this.gear = div.querySelector('.gear');
     this.achievements = div.querySelector('.achievements');
@@ -71,10 +74,12 @@ Acko.Effect.Config.prototype = _.extend(new Acko.Effect(), {
     }
 
     stats.domElement.style.display = c.fps ? 'block' : 'none';
+    Acko.globalVolume = c.mute ? 0 : 1;
 
     if (form) {
       this.select.selectedIndex = {'normal':0,'ssao':1,'ega':2}[c.style];
       this.fps.checked = !!c.fps;
+      this.mute.checked = !!c.mute;
     }
 
     this.gl.resize(true);
@@ -91,6 +96,17 @@ Acko.Effect.Config.prototype = _.extend(new Acko.Effect(), {
 
       this.apply(c);
       this.select.blur();
+    }.bind(this));
+
+    this.mute.addEventListener('change', function () {
+      var value = this.mute.checked;
+
+      var c = getStorage('config');
+      c.mute = value;
+      setStorage('config', c);
+
+      this.apply(c);
+      this.mute.blur();
     }.bind(this));
 
     this.fps.addEventListener('change', function () {
@@ -149,8 +165,9 @@ Acko.Effect.Config.prototype = _.extend(new Acko.Effect(), {
 
   resize: function (exports) {
     var resolution = exports.width + ' × ' + exports.height;
-    var aa = exports.compose.msaa ? ('MSAA×' + exports.compose.msaa)
-                                  : (exports.compose.fxaa ? 'FXAA' : 'No AA');
+    var aa = (exports.compose.msaa && !exports.compose.ssao && !exports.compose.eightbit)
+             ? ('MSAA×' + exports.compose.msaa)
+             : (exports.compose.fxaa ? 'FXAA' : 'No AA');
 
     this.resolution.innerHTML = resolution + ' <span>' + aa + '</span>';
   },
@@ -158,3 +175,5 @@ Acko.Effect.Config.prototype = _.extend(new Acko.Effect(), {
 });
 
 Acko.Effects.push(new Acko.Effect.Config());
+
+Acko.globalVolume = 1;

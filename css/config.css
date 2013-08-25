@@ -7,8 +7,8 @@
   color: #fff;
   text-shadow: 0px 1px rgba(0, 0, 0, .3);
   
-  height: 210px;
-  width: 439px;
+  height: 238px;
+  width: 479px;
   overflow: hidden;
 
   transition: transform .3s ease-in-out;
@@ -17,17 +17,19 @@
   transform: translateZ(0px);
   -webkit-transform: translateZ(0px);
 }
+
 .config.collapsed {
-  transform: translate3d(0, -157px, 0);
-  -webkit-transform: translate3d(0, -157px, 0);
+  transform: translate3d(0, -185px, 0);
+  -webkit-transform: translate3d(0, -185px, 0);
 }
+
 .config .bg {
   position: absolute;
   right: 0;
   width: 0;
   height: 0;
-  border-top: 210px solid rgba(92,100,114, .75);
-  border-left: 439px solid transparent;
+  border-top: 238px solid rgba(92,100,114, .75);
+  border-left: 479px solid transparent;
   pointer-events: none;
 }
 .config .achievements {
@@ -69,11 +71,13 @@
   box-shadow: 0px 1px rgba(0, 0, 0, .3),
               inset 0 1px 1px rgba(0, 0, 0, 0.3);
 }
+
 .config .style {
   position: absolute;
   right: 22px;
   top: 95px;
 }
+
 .config .style select {
   margin: 0 0 0 14px;
   border: 0;
@@ -88,22 +92,31 @@
   color: rgb(230,237,240);
   -webkit-font-smoothing: antialiased;
 }
+
 .config select option {
   color: rgb(92,100,114);
 }
+
+.config .mute {
+  position: absolute;
+  right: 20px;
+  top: 125px;
+}
+
 .config .fps {
   position: absolute;
   right: 20px;
-  top: 123px;
+  top: 151px;
 }
-.config .fps input {
+
+.config .fps input, .config .mute input {
   margin-left: 14px;
 }
 
 .config .gear {
   position: absolute;
   right: 0px;
-  top: 157px;
+  top: 184px;
   padding-left: 52px;
   padding-top: 8px;
   width: 58px;
@@ -113,6 +126,7 @@
   transition: opacity .15s ease-out;
   -webkit-transition: opacity .15s ease-out;
 }
+
 .config .gear:hover {
   opacity: 1;
 }

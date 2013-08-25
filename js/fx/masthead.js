@@ -184,7 +184,6 @@ Acko.Effect.Masthead.prototype = _.extend(new Acko.Effect(), {
       bhc.copy(title.position);
       bhc.x += 105;
       bhc.y -= 7.5;
-      bhc.z -= 5;
     }
 
     titleShadow1.position.copy(title.position).add(v);
