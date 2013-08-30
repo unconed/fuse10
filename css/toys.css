@@ -76,9 +76,10 @@ a .image {
   opacity: .85;
   transition: .08s opacity ease-in-out;
   -webkit-transition: .08s opacity ease-in-out;
+  -webkit-transform: translateZ(0px);
 }
 a:hover .image {
-  opacity: 1;
+  opacity: .999;
 }
 
 .tv {
