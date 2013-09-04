@@ -396,23 +396,30 @@ Acko.Behaviors.push(function () {
     },
 
     runScripts: function (scripts, callback) {
-      var toLoad = 0;
+      var toLoad = [];
+
+      function insert(url) {
+        var s = document.createElement('script');
+        s.onload = unqueue;
+        s.src = url;
+
+        document.body.appendChild(s);
+      }
 
       function unqueue() {
-        if (--toLoad == 0) {
-          callback && callback();
+        if (toLoad.length == 0) {
+          callback && setTimeout(function () {
+            callback();
+          }, 0);
+        }
+        else {
+          insert(toLoad.shift());
         }
       }
 
       scripts.forEach(function (script) {
         if (script.url) {
-          toLoad++;
-
-          var s = document.createElement('script');
-          s.onload = unqueue;
-          s.src = script.url;
-
-          document.body.appendChild(s);
+          toLoad.push(script.url);
         }
         if (script.local) {
           try {
@@ -423,7 +430,8 @@ Acko.Behaviors.push(function () {
         }
       });
 
-      if (toLoad == 0) callback && callback();
+      if (toLoad.length == 0) callback && callback();
+      else unqueue();
     },
 
   };
