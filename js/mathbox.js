@@ -60,6 +60,21 @@ function check() {
   });
 }
 
+// Pass-through global time
+var last = 0;
+
+requestAnimationFrame(function loop() {
+  requestAnimationFrame(loop);
+
+  var speed = Time.getSpeed();
+  if (Math.abs(speed - last) > .01) {
+    forEach(mathboxes, function (el) {
+      el && el.contentWindow && el.contentWindow.mathbox && el.contentWindow.mathbox.speed(speed);
+    });
+    last = speed;
+  }
+});
+
 window.addEventListener('resize', reflow);
 window.addEventListener('scroll', check);
 
@@ -81,14 +96,14 @@ Acko.Behaviors.push(function (el) {
     forEach(on, function (el) {
       var director = el.contentWindow.director;
       if (director) {
-        var target, nav = el.parentNode.querySelector('mathbox-nav');
+        var target, nav = el.parentNode.querySelector('.nav');
         if (e.keyCode == 38 || e.keyCode == 37) {
           target = nav.querySelector('.prev');
         }
         else if (e.keyCode == 40 || e.keyCode == 39) {
           target = nav.querySelector('.next');
         }
-        target && target.click();
+        target && !target.classList.contains('inactive') && target.click();
       }
     });
   });
@@ -106,6 +121,7 @@ Acko.SlideShow = function (container) {
   this.steps = [];
   this.director = null;
   this.nav = {};
+  this.reflowTimer = null;
 
   if (Acko.Fallback.isRequired()) {
     this.unsupported();
@@ -221,7 +237,11 @@ Acko.SlideShow.prototype = {
   },
 
   resize: function () {
-    this.layout();
+    if (this.reflowTimer) clearTimeout(this.reflowTimer);
+    this.reflowTimer = setTimeout(function () {
+      this.layout();
+      this.reflowTimer = null;
+    }.bind(this), 300);
   },
 
   connect: function () {
@@ -272,10 +292,23 @@ Acko.SlideShow.prototype = {
       this.lastDirection = direction;
     }
 
-    this.director && this.director.go(this.step + this.skip);
-
     this.steps[this.step].classList.add('active');
     this.update();
+
+    forEach(this.steps, function (step, i) {
+      if (Math.abs(i - this.step) > 2) {
+        if (!step.classList.contains('inactive')) {
+          step.classList.add('inactive');
+        }
+      }
+      else {
+        if (step.classList.contains('inactive')) {
+          step.classList.remove('inactive');
+        }
+      }
+    }.bind(this));
+
+    this.director && this.director.go(this.step + this.skip);
   },
 
   again: function () {
@@ -287,8 +320,8 @@ Acko.SlideShow.prototype = {
       }.bind(this));
 
       setTimeout(function () {
-        this.director.go(this.step + this.skip);
         this.update();
+        this.director.go(this.step + this.skip);
       }.bind(this), 300);
     }
   },
@@ -326,7 +359,7 @@ var slideShows = [];
 
 var resizeHandler = function () {
   slideShows.slice().forEach(function (show, i) {
-    show.layout();
+    show.resize();
   });
 };
 window.addEventListener('resize', resizeHandler);
