@@ -176,7 +176,7 @@ Acko.Main = function () {
         css3d.scroll(s);
         css3d.update();
 
-        cssActive = !gl.exports.pastMastHead;
+        cssActive = !gl.exports.pastMasthead;
       }
       else {
         // Render one last frame of css3d to clean things up
